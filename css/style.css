@@ -1,3 +1,5 @@
+/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced)*/
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +11,7 @@ body {
   line-height: 1.5;
 }
 
+/*Commented below out from starter code (to be replaced with other CSS styling)
 h1,
 h2,
 h3,
@@ -20,4 +23,30 @@ h6 {
 
 p {
   margin: 0;
+}
+
+/*
+
+/* **Header/Nav Bar** */
+
+/*Flex container for Header and Nav Links*/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+/*Flex container for Nav Links only*/
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+/*Repostion Header on Nav Bar*/
+.margin-left {
+  margin-left: 30px;
 }
