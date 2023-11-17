@@ -1,4 +1,4 @@
- <!--My Edits: 1. Renamed title. 2. Added ul/li, classes and copy (words) to Header/Nav Bar-->
+ <!--My Edits: 1. Renamed title. 2. Added ul/li, classes and copy (words) to Header/Nav Bar. 3. Commented out some of starter code (no hero banner on my layout). 2. Added id/classes, an image (inc alt text), ul/li, copy (words) and other formatting to About Me section.-->
  
  <!DOCTYPE html>
 <html lang="en-gb">
@@ -24,17 +24,23 @@
     </nav>
   </header>
 
-  <!-- hero banner -->
+  <!--INACTIVE - Commented below out from starter code (no hero banner on my layout)
   <section class="hero-banner">
     <div>
       <h2>Cool subtitle here!</h2>
     </div>
-  </section>
+  </section>-->
 
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
+  <main class="page-wrapper"><!--MAYBE DELETE THIS CLASS?-->
+    <!-- About me -->
+    <section id="about">
+      <h2 class="about-header">About Me</h2>
+      <img class="about-image" src="./images/codeem-avatar.jpeg" alt="An avatar of Code Em, in black and white, showing her head and shoulders. The character has her hair tied up in a bun on the top of her head, a small smile on her face and is wearing a turtle-neck jumper.">
+      <ul class="about-text">
+        <li><b>Learning:</b> junior web developer, studying hard and putting learning into action through disciplined practice.</li><br>
+        <li><b>Growing:</b> pivoting from over a decade’s long career in Higher Education.</li><br>
+        <li><b>Building:</b> watch this space, as the built projects grow.</li><br>
+      </ul>
     </section>
 
     <!-- portfolio container -->
