@@ -1,4 +1,4 @@
-/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family */
+/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid*/
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
@@ -7,7 +7,7 @@
   --font-family: "Segoe UI", "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
 
-/*Styles all of page (where not overridden by class/id selector) (all elements’ padding and border are included in width and height)*/
+/*Styles all of page (where not overridden by class/id selector due to CSS specificity) (all elements’ padding and border are included in width and height)*/
 * {
   box-sizing: border-box;
 }
@@ -84,14 +84,14 @@ nav a {
   color: var(--light);
 }
 
-/*Styling for Header (REMINDER - will affect other h1s, if not overriden elsewhere)*/
+/*Styling for Header (REMINDER - will affect other h1s, if not overriden by class/id selector)*/
 h1 {
   font-size: 300%;
 }
 
 /* **About Me Section** */
 
-/*Grid for About Me section*/
+/*Grid for About Me section (used id so can link to this)*/
 #about {
   width: 100%;
   display: grid;
@@ -99,13 +99,13 @@ h1 {
   grid-column-gap: 1em;
  }
 
- /*Postions Header in About grid cell*/
-.about-header {
- justify-self: right;
- margin-right: 20px;
+ /*Postions Header in About grid cell (and in Work grid)*/
+.about-header, #work-header {
+  justify-self: right;
+  margin-right: 20px;
 }
 
-/*Sizing for image in About grid cell (so it will fill and adapt according to grid size)*/
+/*Sizing for image in About grid cell (so it will fill and adapt according to grid size; used id so won't be overridden)*/
 #about img {
   max-width: 100%;
   height: auto;
@@ -120,9 +120,10 @@ h1 {
 
 /* **Work Section** */
 
-/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec)*/
+/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec; used id so can link to this; positioned relative for work-header-2 to be absolute)*/
 #work {
   margin: 0px 5%;
+  position: relative;
   display: grid;
   grid-gap: 0.5em;
   grid-template-rows: 300px 200px 200px;
@@ -130,12 +131,17 @@ h1 {
   grid-template-areas: "work-header work-big work-big" ". work-2 work-3" ". work-4 work-5";
 }
 
+/*Styling for links in Work section (removes line)*/
+#work a {
+  text-decoration: none;
+}
 
+/*Positions Work Header in Work grid*/
 #work-header {
   grid-area: work-header;
 }
 
-/*Positions items in Work grid and adds background image of projects*/
+/*Positions items in Work grid and adds background image of projects (used ids so won't be overridden)*/
 #work-big {
   grid-area: work-big;
   background-image: url(../images/01-html-css-git-challenge.png);
@@ -159,4 +165,25 @@ h1 {
 #work-5 {
   grid-area: work-5;
   background-image: url(../images/green-placeholder.jpg);
+}
+
+/*Grid for Work Item Headers (within Work Grid)*/ /*CREDIT: code for this grid and work-header-2 below adapted from edX (2023) Skillsbootcamp in Front End Web Dev: Module 2: Lesson 02: Activity 02*/ /*Changed colours and size/positioning of headers using justify-self and changing max-width*/
+
+.work-grid {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.work-header-2 {
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 5px solid black;
+  justify-self: end;
+  padding: 25px;
+  max-width: 100%;
+  z-index: 100;
 }
