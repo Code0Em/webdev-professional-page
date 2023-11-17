@@ -1,16 +1,30 @@
-/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1*/
+/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family */
+
+/*var() function for colours and font family (for use across page where variable added)*/
+:root {
+  --dark: black;
+  --light: white;
+  --font-family: "Segoe UI", "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+}
 
 /*Styles all of page (where not overridden by class/id selector) (all elements’ padding and border are included in width and height)*/
 * {
   box-sizing: border-box;
 }
 
-/*Styles body of page (where not overridden by class/id selector; the case for all element selectors below) (sets STILL TO FINISH)*/
+/*Styles body of page (where not overridden by class/id selector; the case for all element selectors below) (STILL TO FINISH)*/
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: var(--light)
+}
+
+/*Styles paragraphs, h2-h6, ul lists and links throughout page, as per variable function*/
+
+p,h2,h3,h4,h5,h6,a,ul {
+  color: var(--dark);
+  font-family: var(--font-family);
 }
 
 /*Styles unordered lists throughout page (removes lists bullet points)*/
@@ -36,13 +50,16 @@ p {
 
 /* **Header/Nav Bar** */
 
-/*Flex container for Header and Nav Links*/
+/*Flex container for Header and Nav Links, and formatting for Header as per var function*/
 header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1%;
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: var(--font-family);
 }
 
 /*Flex container for Nav Links (in unordered list) only*/
@@ -58,12 +75,13 @@ nav ul {
   margin-left: 30px;
 }
 
-/*Styling and positioning for Nav Links*/
+/*Styling and positioning for Nav Links, and colour as per var function*/
 nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 200%;
   margin-right: 30px;
+  color: var(--light);
 }
 
 /*Styling for Header (REMINDER - will affect other h1s, if not overriden elsewhere)*/
@@ -72,3 +90,30 @@ h1 {
 }
 
 /* **About Me Section** */
+
+/*Grid for About Me section*/
+#about {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 20% 65%;
+  grid-column-gap: 1em;
+ }
+
+ /*Postions Header in About grid cell*/
+.about-header {
+ justify-self: right;
+ margin-right: 20px;
+}
+
+/*Sizing for image in About grid (so it will fill and adapt according to grid size)*/
+#about img {
+  max-width: 100%;
+  height: auto;
+  }
+
+/*Postions Text in About grid cell and sizes the font*/
+.about-text {
+  align-self: center;
+  padding-right: 10%;
+  font-size: 150%;
+}
