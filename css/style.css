@@ -105,7 +105,7 @@ h1 {
  margin-right: 20px;
 }
 
-/*Sizing for image in About grid (so it will fill and adapt according to grid size)*/
+/*Sizing for image in About grid cell (so it will fill and adapt according to grid size)*/
 #about img {
   max-width: 100%;
   height: auto;
@@ -116,4 +116,47 @@ h1 {
   align-self: center;
   padding-right: 10%;
   font-size: 150%;
+}
+
+/* **Work Section** */
+
+/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec)*/
+#work {
+  margin: 0px 5%;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-rows: 300px 200px 200px;
+  grid-template-columns: 10% 45% 45%;
+  grid-template-areas: "work-header work-big work-big" ". work-2 work-3" ". work-4 work-5";
+}
+
+
+#work-header {
+  grid-area: work-header;
+}
+
+/*Positions items in Work grid and adds background image of projects*/
+#work-big {
+  grid-area: work-big;
+  background-image: url(../images/01-html-css-git-challenge.png);
+}
+
+#work-2 {
+  grid-area: work-2;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+#work-3 {
+  grid-area: work-3;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+#work-4 {
+  grid-area: work-4;
+  background-image: url(../images/green-placeholder.jpg);
+}
+
+#work-5 {
+  grid-area: work-5;
+  background-image: url(../images/green-placeholder.jpg);
 }
