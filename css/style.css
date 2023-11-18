@@ -1,4 +1,4 @@
-/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid 15. Created grid for Contact Me section, added font-family to Contact section, created flex containder for contact links, set these items as inline and added styling to links 16. Repositioned Contact header in Contact grid.*/
+/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid 15. Created grid for Contact Me section, added font-family to Contact section, created flex containder for contact links, set these items as inline and added styling to links 16. Repositioned Contact header in Contact grid. 17. Added media queries for medium screen sizes (up to 1007px)*/
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
@@ -217,4 +217,37 @@ h1 {
   font-family: var(--font-family);
   font-size: 150%;
   font-weight: bold;
+}
+
+/* **Media Queries** */
+
+/* *Medium (641px to 1007px)* */
+
+@media screen and (max-width: 1007px) {
+  /*Reduces font size in Header/Nav Bar*/
+  header h1, nav a {
+    font-size: 150%;
+  }
+
+  /*Reduces font size of main headers in About, Work and Contact; removes their margin*/
+  .about-header, #work-header, .contact-header {
+    font-size: 100%;
+    margin-right: 0px;
+  }
+
+  /*No longer displays image (avatar) in About*/
+  .about-image {
+    display: none;
+  }
+
+  /*Repositions text (takes up two coloums now) and resizes text in About*/
+  .about-text {
+    grid-column: 2 / span 3;
+    font-size: 100%;
+  }
+
+  /*Reduces font size of links in Contact*/
+  #contact a {
+    font-size: 100%;
+  }
 }
