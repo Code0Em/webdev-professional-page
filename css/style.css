@@ -1,4 +1,4 @@
-/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid*/
+/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid 15. Created grid for Contact Me section, added font-family to Contact section, created flex containder for contact links, set these items as inline and added styling to links 16. Repositioned Contact header in Contact grid.*/
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
@@ -99,8 +99,8 @@ h1 {
   grid-column-gap: 1em;
  }
 
- /*Postions Header in About grid cell (and in Work grid)*/
-.about-header, #work-header {
+ /*Postions Header in About grid cell (and in Work grid, and in Contact grid)*/
+.about-header, #work-header, .contact-header {
   justify-self: right;
   margin-right: 20px;
 }
@@ -120,10 +120,9 @@ h1 {
 
 /* **Work Section** */
 
-/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec; used id so can link to this; positioned relative for work-header-2 to be absolute)*/
+/*Grid for Work section (grid-template areas defined so that work-big will appear larger than work-2 to 5 as per spec; used id so can link to this)*/
 #work {
   margin: 0px 5%;
-  position: relative;
   display: grid;
   grid-gap: 0.5em;
   grid-template-rows: 300px 200px 200px;
@@ -187,4 +186,35 @@ h1 {
   padding: 25px;
   max-width: 100%;
   z-index: 100;
+  }
+
+/* **Contact Me Section** */
+
+/*Grid for Contact section (also sets font-family for grid; used id so can link to this)*/
+#contact {
+  width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-column-gap: 1em;
+  font-family: var(--font-family);
+}
+
+/*Flex container for Contact links (in unordered list) only*/
+ #contact ul {
+  display: flex;
+  justify-content:space-around;
+ }
+ 
+ /*Sets Contact links (list items) in line only*/
+ #contact li {
+  display: inline;
+ }
+
+ /*Styling for links in Work section (removes line, sets font family as per var function, sets font size and font weight)*/
+ #contact a {
+  text-decoration:none; 
+  font-family: var(--font-family);
+  font-size: 150%;
+  font-weight: bold;
 }
