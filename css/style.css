@@ -84,7 +84,7 @@ nav a {
   color: var(--light);
 }
 
-/*Styling for Header (REMINDER - will affect other h1s, if not overriden by class/id selector)*/
+/*Styling for Header (REMINDER: this styling will affect other h1s, if not overriden by class/id selector elsewhere)*/
 h1 {
   font-size: 300%;
 }
@@ -147,6 +147,7 @@ h1 {
   background-image: url(../images/01-html-css-git-challenge.png);
 }
 
+/*REMINDER: To add other projects, update background-images in #work-2 to 5*/
 #work-2 {
   grid-area: work-2;
   background-image: url(../images/green-placeholder.jpg);

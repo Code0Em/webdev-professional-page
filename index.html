@@ -1,4 +1,4 @@
- <!--My Edits: 1. Renamed title. 2. Added ul/li, classes and copy (words) to Header/Nav Bar. 3. Commented out some of starter code (no hero banner on my layout). 4. Added id/classes, an image (inc alt text), ul/li, copy (words) and other formatting to About Me section. 5. Added articles/h3s and id/class selectors to Work section 6. Added links to items in Work Section (changed articles to a)-->
+ <!--My Edits: 1. Renamed title. 2. Added ul/li, classes and copy (words) to Header/Nav Bar. 3. Commented out some of starter code (no hero banner on my layout). 4. Added id/classes, an image (inc alt text), ul/li, copy (words) and other formatting to About Me section. 5. Added articles/h3s and id/class selectors to Work section 6. Added links to items in Work Section (changed articles to anchors) 7. Added h2, ul/li, id/classes and links to Contact section 8. Added reminder in comments of how to add other projects to page (replicated on CSS too)-->
  
  <!DOCTYPE html>
 <html lang="en-gb">
@@ -49,6 +49,7 @@
       <a id="work-big" class="work-grid" href="https://code0em.github.io/refactor-for-accessibility/">
         <h3 class="work-header-2">Refactor for accessibility</h3>
       </a>
+      <!--REMINDER: To add other projects, update anchors/headers below  -->
       <a href="" target="_blank" id="work-2" class="work-grid">
         <h3 class="work-header-2">Coming Soon</h3>
       </a>
@@ -63,9 +64,13 @@
       </a>
     </section>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
+    <!-- Contact me -->
+    <section id="contact">
+      <h2 class="contact-header">Contact Me</h2>
+      <ul class="contact-links">
+        <li><a href="mailto:code.em@outlook.com">Code Em Email</a></li>
+        <li><a href="https://github.com/Code0Em">Code Em GitHub</a></li>
+      </ul>
     </section>
   </main>
 </body>
