@@ -37,9 +37,9 @@ Wireframes were created to demonstrate the page layout on different devices/scre
 
 <img src="./images/wireframe-mobile.png" alt="Screenshot of wireframe for mobile. This is the same as the wireframe for medium screens, but the header/navigation bar and all of the header sections are no longer included." width="50%"/><br>
 
-To meet the aims of the project and build the page (as per the wireframes above), CSS flexboxes, grids and media queries were added into the original starter code. This included three individual grids for the “About me”, “Work” and “Contact me” sections.
+To meet the aims of the project and build the page (as per the wireframes above), CSS flexboxes, grids and media queries were added into the original starter code.
 
-On reflection, a CSS grid applied to the `<main>` element may have been a better approach (e.g. would have allowed for easier symmetry across the three sections).
+On the current build, three individual CSS grids have been used to structure the “About me”, “Work” and “Contact me” sections respectively. Yet, on reflection, a CSS grid applied to the `<main>` element may have been a better approach; for example, this would have allowed for easier symmetry across the three sections.
 
 The design for mobile is also, arguably, a ‘pared down’ version of the design for larger resolutions. To combat this, a mobile-first approach could have been considered from the outset (Interaction Design Foundation, 2016).
 
@@ -63,6 +63,8 @@ Note: On resolutions of 1007px or below, the avatar in the “About Me” sectio
 
 Credit given to edX (2023) for providing the starter code, as well as for code adapted for the headers displayed over the project images in “Work” (credit also cited in code comments).
 
+Credit given to CSS-Tricks (2014), whose article helped to solve an issue with unintended body overflow (credit also cited in code comments).
+
 Credit given to Excalidraw (2023), which was used to create the wireframes for the build. Credit also given to the avatar-maker tool, which was used to create the avatar displayed in “About Me”. Other credits have been cited above, and all references listed below. 
 
 ## License
@@ -76,6 +78,8 @@ Wireframes created and code written by Code0Em ([email](mailto:code.em@outlook.c
 ## References
 
 Anon (no date) [*Avatar Maker*](https://avatarmaker.com).
+
+CSS-Tricks (2014) [*Finding/Fixing Unintended Body Overflow*](https://css-tricks.com/findingfixing-unintended-body-overflow/).
 
 edX (2023) [*Build new skills. Advance your career*](https://www.edx.org/).
 

@@ -1,4 +1,4 @@
-/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid 15. Created grid for Contact Me section, added font-family to Contact section, created flex containder for contact links, set these items as inline and added styling to links 16. Repositioned Contact header in Contact grid. 17. Added media queries for medium screen sizes (up to 1007px) 18. Added media queries for mobile (less than 376px)*/
+/*My Edits: 1. Created flex containers for header and nav ul. 2. Targeted margin-left selector 3. Commented out some of starter code (to be replaced) 4. Added styling and positioning for nav a. 5. Removed list type for ul (all of page). 6. Started to add comments to explain CSS rules. 7. Added styling to h1. 8. Created Grid for About Me, positioned items within it and formatted image size, and text size (in about-text). 9. Added var function for colours and font family. 10. Created Grid for Work, positioned items within it and added background images to items. 11. Created Grid for Work Headings (nested in Work grid), positioned items within it and changed colours, width etc. 12. Added credit reference for adapted code. 13. Adding styling to links in Work section (removed underlining) 14. Repositioned Work header in Work grid 15. Created grid for Contact Me section, added font-family to Contact section, created flex containder for contact links, set these items as inline and added styling to links 16. Repositioned Contact header in Contact grid. 17. Added media queries for medium screen sizes (up to 1007px) 18. Added media queries for mobile (less than 376px) 19. Tidied up code comments 20. Found and fixed unintended body overflow (identified in About and Contact)*/
 
 /*var() function for colours and font family (for use across page where variable added)*/
 :root {
@@ -12,12 +12,13 @@
   box-sizing: border-box;
 }
 
-/*Styles body of page (where not overridden by class/id selector; the case for all element selectors below) (STILL TO FINISH)*/
+/*Styles body of page (where not overridden by class/id selector; the case for all element selectors below) (sets margin/padding for all elements in body, line height and background colour as per var function)*/
+
 body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  background-color: var(--light)
+  background-color: var(--light);
 }
 
 /*Styles paragraphs, h2-h6, ul lists and links throughout page, as per variable function*/
@@ -32,7 +33,7 @@ ul {
   list-style-type: none;
 }
 
-/*INACTIVE - Commented below out from starter code (to be replaced with other CSS styling)
+/*INACTIVE - Commented below out from starter code (replaced with other CSS styling)
 h1,
 h2,
 h3,
@@ -52,7 +53,7 @@ p {
 
 /*Flex container for Header and Nav Links, and formatting for Header as per var function*/
 header {
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +63,7 @@ header {
   font-family: var(--font-family);
 }
 
-/*Flex container for Nav Links (in unordered list) only*/
+/*Flex container for Nav Links (in unordered list)*/
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -91,15 +92,16 @@ h1 {
 
 /* **About Me Section** */
 
-/*Grid for About Me section (used id so can link to this)*/
+/*Grid for About Me section (used id selector so can link to this; set overflow as hidden, because worked out that there was overflow on child element)*/ /*CREDIT: worked this out thanks to the help of CSS-Tricks (2014) Finding/Fixing Unintended Body Overflow (https://css-tricks.com/findingfixing-unintended-body-overflow/)*/
 #about {
   width: 100%;
   display: grid;
   grid-template-columns: 15% 20% 65%;
   grid-column-gap: 1em;
+  overflow-x: hidden;
  }
 
- /*Postions Header in About grid cell (and in Work grid, and in Contact grid)*/
+ /*Postions Header in About grid cell (and does same for Work header in Work grid, and Contact header in Contact grid)*/
 .about-header, #work-header, .contact-header {
   justify-self: right;
   margin-right: 20px;
@@ -190,28 +192,28 @@ h1 {
 
 /* **Contact Me Section** */
 
-/*Grid for Contact section (also sets font-family for grid; used id so can link to this)*/
+/*Grid for Contact section (also sets font-family for grid; used id so can link to this; sets overflow as hidden, because worked out that there was overflow on child element)*/ /*CREDIT: worked this out thanks to the help of CSS-Tricks (2014) Finding/Fixing Unintended Body Overflow (https://css-tricks.com/findingfixing-unintended-body-overflow/)*/
 #contact {
-  width: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 15% 85%;
   grid-column-gap: 1em;
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
-/*Flex container for Contact links (in unordered list) only*/
+/*Flex container for Contact links (in unordered list)*/
  #contact ul {
   display: flex;
   justify-content: space-around;
  }
  
- /*Sets Contact links (list items) in line only*/
+ /*Sets Contact links (list items) to inline*/
  #contact li {
   display: inline;
  }
 
- /*Styling for links in Work section (removes line, sets font family as per var function, sets font size and font weight)*/
+ /*Styling for links in Work section (removes underlining, sets font family as per var function, sets font size and font weight)*/
  #contact a {
   text-decoration:none; 
   font-family: var(--font-family);
@@ -262,7 +264,7 @@ h1 {
     display: none;
   }
 
-  /*Repositions text (takes up three coloums now)*/
+  /*Repositions text in About (takes up three coloums now)*/
    .about-text {
     grid-column: 1 / span 3;
   }
