@@ -39,7 +39,7 @@ Wireframes were created to demonstrate the page layout on different devices/scre
 
 To meet the aims of the project and build the page (as per the wireframes above), CSS flexboxes, grids and media queries were added into the original starter code.
 
-On the current build, three individual CSS grids have been used to structure the “About me”, “Work” and “Contact me” sections respectively. Yet, on reflection, a CSS grid applied to the `<main>` element may have been a better approach; for example, this would have allowed for easier symmetry across the three sections.
+On the current build, three individual CSS grids have been used to structure the “About me”, “Work” and “Contact me” sections respectively. Yet, on reflection, a CSS grid applied to the `<main>` element may have been a better approach; for example, this could have allowed for easier symmetry across the three sections.
 
 The design for mobile is also, arguably, a ‘pared down’ version of the design for larger resolutions. To combat this, a mobile-first approach could have been considered from the outset (Interaction Design Foundation, 2016).
 
@@ -49,7 +49,7 @@ N/A
 
 ## Usage
 
-Users navigate to the webpage via the URL ([Code Em - Web Developer](ADD LINK WHEN DEPLOYED). When on the webpage, (on resolutions of 376 or greater), users can navigate to different sections of the page via the hyperlinks in the navigation bar (top right of the page).
+Users navigate to the webpage via the URL ([Code Em - Web Developer](https://code0em.github.io/webdev-professional-page/)). When on the webpage, (on resolutions of 376 or greater), users can navigate to different sections of the page via the hyperlinks in the navigation bar (top right of the page).
 
 To visit the projects showcased on the page, users can select the project’s image or header and will be navigated to said project’s external page.
 
