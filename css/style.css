@@ -4,7 +4,7 @@
 :root {
   --dark: black;
   --light: white;
-  --font-family: "Segoe UI", "Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+  --font-family: Arial;
 }
 
 /*Styles all of page (where not overridden by class/id selector due to CSS specificity) (all elements’ padding and border are included in width and height)*/
